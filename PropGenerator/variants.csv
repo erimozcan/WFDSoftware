@@ -1,0 +1,11 @@
+variant_id,GeometricPitch,TipChordScale,TipThickScale,TipTEOffset
+pitch_9p5_conservative,9.5 in,0.80,0.70,0 in
+pitch_10p5_moderate,10.5 in,0.80,0.70,0 in
+pitch_11p5_high,11.5 in,0.80,0.70,0 in
+pitch_12p2_near_apc_low,12.2 in,0.78,0.68,0 in
+pitch_12p5_thin_tip,12.5 in,0.80,0.58,0 in
+pitch_12p5_narrow_tip,12.5 in,0.68,0.62,0 in
+apc_pd_match_pitch_12p86,12.86 in,0.76,0.64,0 in
+above_apc_pd_pitch_13p5,13.5 in,0.74,0.62,0 in
+above_apc_pd_pitch_14p2,14.2 in,0.70,0.60,0.03 in
+above_apc_pd_pitch_15p0,15.0 in,0.66,0.58,0.04 in

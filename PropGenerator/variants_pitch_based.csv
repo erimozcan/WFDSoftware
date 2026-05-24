@@ -1,0 +1,11 @@
+variant_id,GeometricPitch,TipChordScale,TipThickScale,TipTEOffset
+baseline_pitch_7p5,7.5 in,1.00,1.00,0 in
+pitch_7p0,7.0 in,1.00,1.00,0 in
+pitch_8p0,8.0 in,1.00,1.00,0 in
+pitch_8p5,8.5 in,1.00,1.00,0 in
+pitch_9p0,9.0 in,1.00,1.00,0 in
+pitch_8p0_thin_tip,8.0 in,1.00,0.92,0 in
+pitch_8p5_thin_tip,8.5 in,1.00,0.92,0 in
+pitch_8p0_narrow_tip,8.0 in,0.94,1.00,0 in
+pitch_8p5_narrow_tip,8.5 in,0.94,1.00,0 in
+pitch_8p5_swept_te,8.5 in,1.00,1.00,0.03 in

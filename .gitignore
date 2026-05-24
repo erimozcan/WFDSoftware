@@ -1,0 +1,45 @@
+# macOS / editor noise
+.DS_Store
+**/.DS_Store
+.vscode/
+*.swp
+*.tmp
+
+# Visual Studio / Windows build products
+.vs/
+**/.vs/
+**/Debug/
+**/Release/
+**/x64/
+**/Win32/
+**/obj/
+**/ipch/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Build and runtime output folders
+**/bin/
+**/temp/
+**/export/
+**/exports/
+
+# CFD/export outputs that get large quickly
+*.vtk
+*.vti
+*.vtu
+*.vtp
+*.raw
+*.qoi
+*.bmp
+*.png
+*.mp4
+*.avi
+
+# Generated propeller sweeps stay local; keep source airfoils/config CSVs tracked.
+PropGenerator/exports/
+
+# Important geometry assets remain trackable.
+!FluidX3D/stl/
+!FluidX3D/stl/WFD_Prop.1.0.stl
