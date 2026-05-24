@@ -1,0 +1,36 @@
+# Visual Studio / build products
+.DS_Store
+**/.DS_Store
+.vs/
+Debug/
+Release/
+x64/
+Win32/
+obj/
+ipch/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Runtime/build output folders
+bin/
+temp/
+export/
+
+# CFD/export outputs that get large quickly
+*.vtk
+*.vti
+*.vtu
+*.vtp
+*.raw
+*.qoi
+*.bmp
+*.png
+*.mp4
+*.avi
+
+# Keep important STL geometry trackable.
+stl/*
+!stl/
+!stl/WFD_Prop.1.0.stl
