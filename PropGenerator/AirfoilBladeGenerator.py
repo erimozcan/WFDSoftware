@@ -42,6 +42,7 @@ CMD_DESC = 'Creates airfoil sections, LE/TE rails, and lofts a blade body.'
 BATCH_MODE = True
 VARIANTS_CSV_NAME = 'variants_pitch_based.csv'
 EXPORTS_DIR_NAME = 'exports'
+CLEAR_PREVIOUS_BATCH_EXPORTS = True
 FIXED_RADIUS_EXPR = "3 in"
 TWIST_MODE = "pitch_based"  # Supported values: "linear", "pitch_based"
 
@@ -414,6 +415,7 @@ def geometry_metadata():
         'HUB_OUTER_DIAMETER_IN': HUB_OUTER_DIAMETER_IN,
         'HUB_THICKNESS_IN': HUB_THICKNESS_IN,
         'M5_CLEARANCE_HOLE_DIAMETER_MM': M5_CLEARANCE_HOLE_DIAMETER_MM,
+        'CLEAR_PREVIOUS_BATCH_EXPORTS': CLEAR_PREVIOUS_BATCH_EXPORTS,
         'FAST_SINGLE_RUN_MODE': FAST_SINGLE_RUN_MODE,
         'FAST_SINGLE_RUN_AIRFOIL_POINTS': FAST_SINGLE_RUN_AIRFOIL_POINTS,
         'FAST_SINGLE_RUN_MAX_STATIONS': FAST_SINGLE_RUN_MAX_STATIONS,
@@ -738,6 +740,34 @@ def read_variants_csv(path):
     if 'variant_id' not in (rows[0].keys() if rows else []):
         raise ValueError('variants.csv must include a required "variant_id" column.')
     return rows
+
+
+def clear_previous_batch_exports(export_dir, variants):
+    if not CLEAR_PREVIOUS_BATCH_EXPORTS:
+        return []
+
+    deleted = []
+    targets = set()
+    for row in variants:
+        variant_id = str(row.get('variant_id', '')).strip()
+        if not variant_id:
+            continue
+        base_name = safe_filename(variant_id)
+        targets.add(base_name + '.stl')
+        targets.add(base_name + '.json')
+
+    targets.add('airfoil_blend_debug.csv')
+
+    for filename in sorted(targets):
+        path = os.path.join(export_dir, filename)
+        if not os.path.isfile(path):
+            continue
+        try:
+            os.remove(path)
+            deleted.append(path)
+        except Exception as exc:
+            raise RuntimeError(f'Could not delete previous batch export "{path}": {exc}') from exc
+    return deleted
 
 
 def write_metadata_json(
@@ -1383,6 +1413,7 @@ def run_batch_variants(ui, design, airfoil_set, csv_path):
     export_dir = os.path.join(os.path.dirname(csv_path), EXPORTS_DIR_NAME)
     if not os.path.isdir(export_dir):
         os.makedirs(export_dir)
+    deleted_exports = clear_previous_batch_exports(export_dir, variants)
     debug_path = export_airfoil_debug_csv(export_dir, airfoil_set)
     baseline_expressions = snapshot_user_parameter_expressions(design)
 
@@ -1449,6 +1480,7 @@ def run_batch_variants(ui, design, airfoil_set, csv_path):
         f'Batch complete.\n'
         f'Radius fixed at {FIXED_RADIUS_EXPR} for all variants.\n'
         f'Twist mode: {TWIST_MODE}\n'
+        f'Previous batch exports deleted: {len(deleted_exports)}\n'
         f'Variants successfully exported: {succeeded}\n'
         f'Failed: {failed}\n'
         f'Exports folder:\n{export_dir}'

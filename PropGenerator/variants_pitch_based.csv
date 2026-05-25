@@ -1,11 +1,11 @@
-variant_id,GeometricPitch,TipChordScale,TipThickScale,TipTEOffset
-baseline_pitch_7p5,7.5 in,1.00,1.00,0 in
-pitch_7p0,7.0 in,1.00,1.00,0 in
-pitch_8p0,8.0 in,1.00,1.00,0 in
-pitch_8p5,8.5 in,1.00,1.00,0 in
-pitch_9p0,9.0 in,1.00,1.00,0 in
-pitch_8p0_thin_tip,8.0 in,1.00,0.92,0 in
-pitch_8p5_thin_tip,8.5 in,1.00,0.92,0 in
-pitch_8p0_narrow_tip,8.0 in,0.94,1.00,0 in
-pitch_8p5_narrow_tip,8.5 in,0.94,1.00,0 in
-pitch_8p5_swept_te,8.5 in,1.00,1.00,0.03 in
+variant_id,GeometricPitch,ChordRoot,ChordPeak,ChordTip
+baseline_pitch_8p5_chord_0p4_0p6_0p25,8.5 in,0.40 in,0.60 in,0.25 in
+pitch_7p5_baseline_chord,7.5 in,0.40 in,0.60 in,0.25 in
+pitch_8p0_baseline_chord,8.0 in,0.40 in,0.60 in,0.25 in
+pitch_9p0_baseline_chord,9.0 in,0.40 in,0.60 in,0.25 in
+pitch_9p5_baseline_chord,9.5 in,0.40 in,0.60 in,0.25 in
+pitch_8p5_wider_chord,8.5 in,0.44 in,0.66 in,0.27 in
+pitch_9p0_wider_chord,9.0 in,0.44 in,0.66 in,0.27 in
+pitch_8p5_slim_chord,8.5 in,0.36 in,0.54 in,0.22 in
+pitch_9p0_slim_chord,9.0 in,0.36 in,0.54 in,0.22 in
+pitch_10p0_slim_chord,10.0 in,0.36 in,0.54 in,0.22 in
