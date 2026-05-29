@@ -1,0 +1,10 @@
+variant_id,original_stl_filename,geometry_sanity_status,warning_flags,xmin,xmax,ymin,ymax,zmin,zmax,diameter_estimate_m,center_x,center_y,center_z
+baseline_pitch_8p5_chord_0p4_0p6_0p25,baseline_pitch_8p5_chord_0p4_0p6_0p25.stl,Geometry Warning,"POSSIBLE_UNIT_SCALE_ERROR,STL_OFFSET_FROM_AXIS,STL_TOO_LARGE",-40.08917999267578,76.19999694824219,-66.84233093261719,66.15983581542969,-8.890000343322754,8.890000343322754,133.00216674804688,18.055408477783203,-0.34124755859375,0.0
+pitch_10p0_slim_chord,pitch_10p0_slim_chord.stl,Not checked,,,,,,,,,,,
+pitch_7p5_baseline_chord,pitch_7p5_baseline_chord.stl,Not checked,,,,,,,,,,,
+pitch_8p0_baseline_chord,pitch_8p0_baseline_chord.stl,Not checked,,,,,,,,,,,
+pitch_8p5_slim_chord,pitch_8p5_slim_chord.stl,Not checked,,,,,,,,,,,
+pitch_8p5_wider_chord,pitch_8p5_wider_chord.stl,Not checked,,,,,,,,,,,
+pitch_9p0_baseline_chord,pitch_9p0_baseline_chord.stl,Not checked,,,,,,,,,,,
+pitch_9p0_slim_chord,pitch_9p0_slim_chord.stl,Not checked,,,,,,,,,,,
+pitch_9p0_wider_chord,pitch_9p0_wider_chord.stl,Not checked,,,,,,,,,,,

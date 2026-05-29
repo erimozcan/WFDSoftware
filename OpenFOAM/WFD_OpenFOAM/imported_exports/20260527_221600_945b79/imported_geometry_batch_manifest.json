@@ -1,0 +1,1411 @@
+{
+  "batch_id": "20260527_221600_945b79",
+  "source": "exports5_27.zip",
+  "created_at": 1779934561.297913,
+  "workflow": "Overnight screening batch. These results are not final aerodynamic validation.",
+  "pre_run_checks": {
+    "import_folder_found": true,
+    "stl_count_detected": 9,
+    "json_metadata_count": 9,
+    "disk_free_GB": 1016.75,
+    "openfoam_available": true,
+    "compressible_forward_mrf_template_available": true
+  },
+  "variants": [
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "baseline_pitch_8p5_chord_0p4_0p6_0p25",
+      "original_stl_filename": "baseline_pitch_8p5_chord_0p4_0p6_0p25.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/baseline_pitch_8p5_chord_0p4_0p6_0p25.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/baseline_pitch_8p5_chord_0p4_0p6_0p25.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "8.5 in",
+          "unit": "in",
+          "value_cm": 21.59
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.60 in",
+          "ChordRoot": "0.40 in",
+          "ChordTip": "0.25 in",
+          "GeometricPitch": "8.5 in",
+          "variant_id": "baseline_pitch_8p5_chord_0p4_0p6_0p25"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.60 in",
+            "unit": "in",
+            "value": 1.524
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.40 in",
+            "unit": "in",
+            "value": 1.016
+          },
+          "ChordTip": {
+            "expression": "0.25 in",
+            "unit": "in",
+            "value": 0.635
+          },
+          "GeometricPitch": {
+            "expression": "8.5 in",
+            "unit": "in",
+            "value": 21.59
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.4166666666666667,
+        "root_blade_angle_deg": 83.67290346840143,
+        "tip_blade_angle_deg": 24.272470588813984,
+        "variant_id": "baseline_pitch_8p5_chord_0p4_0p6_0p25"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_10p0_slim_chord",
+      "original_stl_filename": "pitch_10p0_slim_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_10p0_slim_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_10p0_slim_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "10.0 in",
+          "unit": "in",
+          "value_cm": 25.4
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.54 in",
+          "ChordRoot": "0.36 in",
+          "ChordTip": "0.22 in",
+          "GeometricPitch": "10.0 in",
+          "variant_id": "pitch_10p0_slim_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.54 in",
+            "unit": "in",
+            "value": 1.3716000000000002
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.36 in",
+            "unit": "in",
+            "value": 0.9144
+          },
+          "ChordTip": {
+            "expression": "0.22 in",
+            "unit": "in",
+            "value": 0.5588
+          },
+          "GeometricPitch": {
+            "expression": "10.0 in",
+            "unit": "in",
+            "value": 25.4
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.6666666666666665,
+        "root_blade_angle_deg": 84.61590408260643,
+        "tip_blade_angle_deg": 27.94668724547887,
+        "variant_id": "pitch_10p0_slim_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_7p5_baseline_chord",
+      "original_stl_filename": "pitch_7p5_baseline_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_7p5_baseline_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_7p5_baseline_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "7.5 in",
+          "unit": "in",
+          "value_cm": 19.05
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.60 in",
+          "ChordRoot": "0.40 in",
+          "ChordTip": "0.25 in",
+          "GeometricPitch": "7.5 in",
+          "variant_id": "pitch_7p5_baseline_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.60 in",
+            "unit": "in",
+            "value": 1.524
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.40 in",
+            "unit": "in",
+            "value": 1.016
+          },
+          "ChordTip": {
+            "expression": "0.25 in",
+            "unit": "in",
+            "value": 0.635
+          },
+          "GeometricPitch": {
+            "expression": "7.5 in",
+            "unit": "in",
+            "value": 19.05
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.25,
+        "root_blade_angle_deg": 82.83754419327418,
+        "tip_blade_angle_deg": 21.696983971540057,
+        "variant_id": "pitch_7p5_baseline_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_8p0_baseline_chord",
+      "original_stl_filename": "pitch_8p0_baseline_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_8p0_baseline_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_8p0_baseline_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "8.0 in",
+          "unit": "in",
+          "value_cm": 20.32
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.60 in",
+          "ChordRoot": "0.40 in",
+          "ChordTip": "0.25 in",
+          "GeometricPitch": "8.0 in",
+          "variant_id": "pitch_8p0_baseline_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.60 in",
+            "unit": "in",
+            "value": 1.524
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.40 in",
+            "unit": "in",
+            "value": 1.016
+          },
+          "ChordTip": {
+            "expression": "0.25 in",
+            "unit": "in",
+            "value": 0.635
+          },
+          "GeometricPitch": {
+            "expression": "8.0 in",
+            "unit": "in",
+            "value": 20.32
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.3333333333333333,
+        "root_blade_angle_deg": 83.28097054483376,
+        "tip_blade_angle_deg": 22.99700767179053,
+        "variant_id": "pitch_8p0_baseline_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_8p5_slim_chord",
+      "original_stl_filename": "pitch_8p5_slim_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_8p5_slim_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_8p5_slim_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "8.5 in",
+          "unit": "in",
+          "value_cm": 21.59
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.54 in",
+          "ChordRoot": "0.36 in",
+          "ChordTip": "0.22 in",
+          "GeometricPitch": "8.5 in",
+          "variant_id": "pitch_8p5_slim_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.54 in",
+            "unit": "in",
+            "value": 1.3716000000000002
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.36 in",
+            "unit": "in",
+            "value": 0.9144
+          },
+          "ChordTip": {
+            "expression": "0.22 in",
+            "unit": "in",
+            "value": 0.5588
+          },
+          "GeometricPitch": {
+            "expression": "8.5 in",
+            "unit": "in",
+            "value": 21.59
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.4166666666666667,
+        "root_blade_angle_deg": 83.67290346840143,
+        "tip_blade_angle_deg": 24.272470588813984,
+        "variant_id": "pitch_8p5_slim_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_8p5_wider_chord",
+      "original_stl_filename": "pitch_8p5_wider_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_8p5_wider_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_8p5_wider_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "8.5 in",
+          "unit": "in",
+          "value_cm": 21.59
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.66 in",
+          "ChordRoot": "0.44 in",
+          "ChordTip": "0.27 in",
+          "GeometricPitch": "8.5 in",
+          "variant_id": "pitch_8p5_wider_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.66 in",
+            "unit": "in",
+            "value": 1.6764000000000001
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.44 in",
+            "unit": "in",
+            "value": 1.1176
+          },
+          "ChordTip": {
+            "expression": "0.27 in",
+            "unit": "in",
+            "value": 0.6858000000000001
+          },
+          "GeometricPitch": {
+            "expression": "8.5 in",
+            "unit": "in",
+            "value": 21.59
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.4166666666666667,
+        "root_blade_angle_deg": 83.67290346840143,
+        "tip_blade_angle_deg": 24.272470588813984,
+        "variant_id": "pitch_8p5_wider_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_9p0_baseline_chord",
+      "original_stl_filename": "pitch_9p0_baseline_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_9p0_baseline_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_9p0_baseline_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "9.0 in",
+          "unit": "in",
+          "value_cm": 22.86
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.60 in",
+          "ChordRoot": "0.40 in",
+          "ChordTip": "0.25 in",
+          "GeometricPitch": "9.0 in",
+          "variant_id": "pitch_9p0_baseline_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.60 in",
+            "unit": "in",
+            "value": 1.524
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.40 in",
+            "unit": "in",
+            "value": 1.016
+          },
+          "ChordTip": {
+            "expression": "0.25 in",
+            "unit": "in",
+            "value": 0.635
+          },
+          "GeometricPitch": {
+            "expression": "9.0 in",
+            "unit": "in",
+            "value": 22.86
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.5,
+        "root_blade_angle_deg": 84.02178926528569,
+        "tip_blade_angle_deg": 25.522834353551843,
+        "variant_id": "pitch_9p0_baseline_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_9p0_slim_chord",
+      "original_stl_filename": "pitch_9p0_slim_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_9p0_slim_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_9p0_slim_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "9.0 in",
+          "unit": "in",
+          "value_cm": 22.86
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.54 in",
+          "ChordRoot": "0.36 in",
+          "ChordTip": "0.22 in",
+          "GeometricPitch": "9.0 in",
+          "variant_id": "pitch_9p0_slim_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.54 in",
+            "unit": "in",
+            "value": 1.3716000000000002
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.36 in",
+            "unit": "in",
+            "value": 0.9144
+          },
+          "ChordTip": {
+            "expression": "0.22 in",
+            "unit": "in",
+            "value": 0.5588
+          },
+          "GeometricPitch": {
+            "expression": "9.0 in",
+            "unit": "in",
+            "value": 22.86
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.5,
+        "root_blade_angle_deg": 84.02178926528569,
+        "tip_blade_angle_deg": 25.522834353551843,
+        "variant_id": "pitch_9p0_slim_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    },
+    {
+      "batch_id": "20260527_221600_945b79",
+      "selected": true,
+      "variant_id": "pitch_9p0_wider_chord",
+      "original_stl_filename": "pitch_9p0_wider_chord.stl",
+      "imported_stl_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_9p0_wider_chord.stl",
+      "json_metadata_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/imported_exports/20260527_221600_945b79/raw/exports/pitch_9p0_wider_chord.json",
+      "json_found": true,
+      "json_metadata": {
+        "GeometricPitch": {
+          "expression": "9.0 in",
+          "unit": "in",
+          "value_cm": 22.86
+        },
+        "TWIST_MODE": "pitch_based",
+        "airfoils": {
+          "MID_TO_TIP_END_S": 0.85,
+          "MID_TO_TIP_START_S": 0.65,
+          "N_AIRFOIL_POINTS": 160,
+          "ROOT_TO_MID_END_S": 0.4,
+          "ROOT_TO_MID_START_S": 0.2,
+          "mid_airfoil_filename": "wfd_16-209_mid.dat",
+          "mid_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-209_mid.dat",
+          "root_airfoil_filename": "wfd_16-212_root.dat",
+          "root_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-212_root.dat",
+          "tip_airfoil_filename": "wfd_16-206_tip.dat",
+          "tip_airfoil_path": "/Users/erimozcan/Desktop/Brown/WFDSoftware/PropGenerator/CamberedAirfoils/wfd_16-206_tip.dat"
+        },
+        "csv_values": {
+          "ChordPeak": "0.66 in",
+          "ChordRoot": "0.44 in",
+          "ChordTip": "0.27 in",
+          "GeometricPitch": "9.0 in",
+          "variant_id": "pitch_9p0_wider_chord"
+        },
+        "geometry": {
+          "CLEAR_PREVIOUS_BATCH_EXPORTS": true,
+          "FAST_SINGLE_RUN_AIRFOIL_POINTS": 80,
+          "FAST_SINGLE_RUN_MAX_STATIONS": 12,
+          "FAST_SINGLE_RUN_MODE": true,
+          "FAST_SINGLE_RUN_SURFACE_LOFT": false,
+          "FINAL_STATION_CHORD_PREV_FACTOR": 0.35,
+          "HUB_OUTER_DIAMETER_IN": 0.8,
+          "HUB_THICKNESS_IN": 0.7,
+          "M5_CLEARANCE_HOLE_DIAMETER_MM": 5.2,
+          "N_BLADES": 3,
+          "ROOT_INBOARD_EXTENSION_IN": 0.3
+        },
+        "parameters": {
+          "ChordPeak": {
+            "expression": "0.66 in",
+            "unit": "in",
+            "value": 1.6764000000000001
+          },
+          "ChordPeakS": {
+            "expression": "0.28",
+            "unit": "",
+            "value": 0.28
+          },
+          "ChordRoot": {
+            "expression": "0.44 in",
+            "unit": "in",
+            "value": 1.1176
+          },
+          "ChordTip": {
+            "expression": "0.27 in",
+            "unit": "in",
+            "value": 0.6858000000000001
+          },
+          "GeometricPitch": {
+            "expression": "9.0 in",
+            "unit": "in",
+            "value": 22.86
+          },
+          "HubR": {
+            "expression": "0.45 in",
+            "unit": "in",
+            "value": 1.143
+          },
+          "Radius": {
+            "expression": "3 in",
+            "unit": "in",
+            "value": 7.62
+          },
+          "ThickEndS": {
+            "expression": "0.25",
+            "unit": "",
+            "value": 0.25
+          },
+          "ThickExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "ThickRootScale": {
+            "expression": "1.25",
+            "unit": "",
+            "value": 1.25
+          },
+          "TipShapeExp": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "TipShapeStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipTEOffset": {
+            "expression": "0.03 in",
+            "unit": "in",
+            "value": 0.0762
+          },
+          "TipTEOffsetExp": {
+            "expression": "1.5",
+            "unit": "",
+            "value": 1.5
+          },
+          "TipTEOffsetStartS": {
+            "expression": "0.6",
+            "unit": "",
+            "value": 0.6
+          },
+          "TipThickScale": {
+            "expression": "1.0",
+            "unit": "",
+            "value": 1.0
+          },
+          "nStations": {
+            "expression": "30",
+            "unit": "",
+            "value": 30.0
+          }
+        },
+        "pitch_to_diameter_ratio": 1.5,
+        "root_blade_angle_deg": 84.02178926528569,
+        "tip_blade_angle_deg": 25.522834353551843,
+        "variant_id": "pitch_9p0_wider_chord"
+      },
+      "pitch": "",
+      "root_chord": "",
+      "peak_chord": "",
+      "tip_chord": "",
+      "diameter_m": 0.1524,
+      "radius_m": 0.0762,
+      "rpm": "",
+      "Vinf_mph": "",
+      "Vinf_mps": "",
+      "Tinf_K": "",
+      "pinf_Pa": "",
+      "solver_mode": "compressible_forward_mrf",
+      "geometry_sanity_status": "Not checked",
+      "warning_flags": ""
+    }
+  ]
+}

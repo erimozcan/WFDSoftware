@@ -1,0 +1,1 @@
+variant_id,solver_mode,Vinf_mps,Vinf_mph,rpm,omega_rad_s,Tinf_K,pinf_Pa,gamma,R,Cp,mu,Pr,diameter_m,radius_m,freestream_Mach,tip_speed_mps,helical_tip_Mach,advance_ratio_J,thrust_convention_N,torque_convention_Nm,fluid_torque_Nm,shaft_torque_Nm,torque_sign_convention,power_W,eta,CT,CQ,CP,run_status,warning_flags,static_thrust_per_watt

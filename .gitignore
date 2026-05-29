@@ -43,3 +43,26 @@ PropGenerator/exports/
 # Important geometry assets remain trackable.
 !FluidX3D/stl/
 !FluidX3D/stl/WFD_Prop.1.0.stl
+
+# OpenFOAM generated/runtime files
+processor*/
+postProcessing/
+VTK/
+*.vtk
+*.foam
+*.OpenFOAM
+log.*
+*.log
+dynamicCode/
+OpenFOAM/WFD_OpenFOAM/cases/*/processor*/
+OpenFOAM/WFD_OpenFOAM/cases/*/postProcessing/
+OpenFOAM/WFD_OpenFOAM/cases/*/VTK/
+OpenFOAM/WFD_OpenFOAM/cases/*/[0-9]*/
+OpenFOAM/WFD_OpenFOAM/cases/*/[0-9]*.[0-9]*/
+__pycache__/
+*.pyc
+*.tar.gz
+*.zip
+
+# Keep OpenFOAM initial condition folders trackable
+OpenFOAM/WFD_OpenFOAM/cases/*/constant/polyMesh/

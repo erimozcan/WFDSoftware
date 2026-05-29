@@ -1,0 +1,49 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py",
+    "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_004/baseline_pitch_8p5_chord_0p4_0p6_0p25",
+    "--solve-only"
+  ],
+  "cwd": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM",
+  "absolute_wrapper_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py",
+  "launch_time": 1780087579.1693115,
+  "termination_reason": "user_stop_button",
+  "termination_initiated_by_backend": true,
+  "timeout_seconds": null,
+  "stdout_stderr_log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_004/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.solveWrapper",
+  "pid": 38494,
+  "returncode": -15,
+  "solver_status": "stopped",
+  "fatal_match": {},
+  "ignored_log_warnings": [],
+  "convergence": {
+    "force_sample_count": 0,
+    "convergence_window_size": 500,
+    "minimum_force_samples": 2000,
+    "thrust_mean_change_pct": null,
+    "torque_mean_change_pct": null,
+    "thrust_cv_pct": null,
+    "torque_cv_pct": null,
+    "latest_thrust_mean_N": null,
+    "latest_shaft_torque_mean_Nm": null,
+    "convergence_status": "warming up",
+    "converged": false,
+    "blocked_by": [
+      "insufficient samples",
+      "insufficient samples for two windows"
+    ],
+    "thrust_mean_change_threshold_pct": 3.0,
+    "torque_mean_change_threshold_pct": 5.0,
+    "thrust_cv_threshold_pct": 5.0,
+    "torque_cv_threshold_pct": 5.0,
+    "convergence_preset": "fast_screening"
+  },
+  "stdout_stderr_tail": [],
+  "solver_log_path": "",
+  "solver_log_exists": false,
+  "solver_log_size": 0,
+  "force_file_path": "",
+  "force_file_exists": false,
+  "force_file_size": 0
+}

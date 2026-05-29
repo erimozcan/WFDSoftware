@@ -1,0 +1,30 @@
+{
+  "case": "pitch_7p5_baseline_chord",
+  "validation_id": "",
+  "solver_log": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_20260528_104510_fa7b09/pitch_7p5_baseline_chord/log.checkMesh",
+  "force_status": {
+    "status": "force data not available yet",
+    "error": "No postProcessing directory found: /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_20260528_104510_fa7b09/pitch_7p5_baseline_chord/postProcessing"
+  },
+  "force_samples": [],
+  "courant": [],
+  "residuals": [],
+  "execution": [],
+  "deltaT": [],
+  "stability": {
+    "thrust_N": {
+      "metric": "thrust_N",
+      "status": "not enough samples",
+      "samples": 0
+    },
+    "shaft_torque_Nm": {
+      "metric": "shaft_torque_Nm",
+      "status": "not enough samples",
+      "samples": 0
+    }
+  },
+  "summary": {
+    "samples_used": 0
+  },
+  "note": ""
+}

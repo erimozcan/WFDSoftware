@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ozcan Propeller CFD</title>
+    <link rel="stylesheet" href="/web/style.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Ozcan Propeller CFD</h1>
+          <p>Local OpenFOAM MRF propeller workflow</p>
+        </div>
+        <div class="case-control">
+          <label for="caseSelect">Selected debug case</label>
+          <select id="caseSelect"></select>
+          <span id="caseMeshState" class="case-state">mesh status unknown</span>
+        </div>
+      </header>
+
+      <section class="layout">
+        <details class="card workflow-card validation-card">
+          <summary>Validation</summary>
+          <div class="card-head">
+            <div>
+              <h2>Validate Forward-Flight Model</h2>
+              <p>Single-case status and setup checks for the compressible freestream MRF workflow.</p>
+            </div>
+          </div>
+
+          <div class="forward-form">
+            <label>
+              <span>Propeller variant</span>
+              <select id="validationVariant"></select>
+            </label>
+            <label>
+              <span>Validation preset</span>
+              <select id="validationPreset">
+                <option value="100_10000" selected>100 mph / 10000 rpm</option>
+                <option value="300_10000">300 mph / 10000 rpm</option>
+                <option value="650_10000">650 mph / 10000 rpm</option>
+                <option value="650_selected">650 mph / selected rpm</option>
+              </select>
+            </label>
+            <label>
+              <span>Selected rpm</span>
+              <input id="validationRpm" type="number" min="0" step="100" value="10000">
+            </label>
+          </div>
+
+          <div class="summary-panel">
+            <div>
+              <strong>Validation setup</strong>
+              <p id="validationSummary">Select a variant to preview the validation case.</p>
+            </div>
+            <ul id="validationWarnings" class="warning-list"></ul>
+          </div>
+
+          <div class="parse-actions">
+            <button id="prepareValidation" class="primary-action">Prepare Validation Case</button>
+            <button id="runValidation" class="run-sweep">Run Validation Case</button>
+            <button id="stopValidation" class="danger-action" disabled>Stop Validation</button>
+          </div>
+
+          <details class="report-panel">
+            <summary>View Validation Report</summary>
+            <pre id="validationReport">No validation report loaded.</pre>
+          </details>
+        </details>
+
+        <article class="card workflow-card batch-run-card">
+          <div class="card-head">
+            <div>
+              <h2>Batch Run</h2>
+              <p>Default condition: 300 mph / 134.112 m/s at 10000 rpm.</p>
+            </div>
+          </div>
+
+          <div class="forward-form">
+            <label>
+              <span>Import STL/JSON zip</span>
+              <input id="overnightZip" type="file" accept=".zip">
+            </label>
+            <label>
+              <span>Or WSL zip/folder path</span>
+              <input id="overnightPath" type="text" placeholder="/mnt/c/Users/.../export.zip">
+            </label>
+            <label>
+              <span>Global RPM</span>
+              <input id="overnightRpm" type="number" min="0" step="100" value="10000">
+            </label>
+            <label>
+              <span>Freestream speed</span>
+              <input id="overnightSpeed" type="number" min="0" step="1" value="300">
+            </label>
+            <label>
+              <span>Units</span>
+              <select id="overnightSpeedUnits">
+                <option value="mph" selected>mph</option>
+                <option value="m/s">m/s</option>
+              </select>
+            </label>
+            <label>
+              <span>Tinf K</span>
+              <input id="overnightTinf" type="number" min="1" step="0.1" value="288.15">
+            </label>
+            <label>
+              <span>pinf Pa</span>
+              <input id="overnightPinf" type="number" min="1" step="1" value="101325">
+            </label>
+            <label>
+              <span>Max minutes / prop</span>
+              <input id="overnightMaxMinutes" type="number" min="0" step="1" value="" placeholder="No timeout">
+            </label>
+            <label>
+              <span>Averaging window</span>
+              <input id="overnightAverageWindow" type="number" min="1" step="1" value="500">
+            </label>
+            <label>
+              <span>Convergence preset</span>
+              <select id="overnightConvergencePreset">
+                <option value="fast_screening" selected>Fast screening</option>
+                <option value="finalist">Finalist</option>
+                <option value="custom">Custom</option>
+              </select>
+            </label>
+          </div>
+
+          <details class="compact-details">
+            <summary>Custom convergence</summary>
+            <div class="forward-form">
+              <label>
+                <span>Minimum samples</span>
+                <input id="convergenceMinSamples" type="number" min="1" step="100" value="2000">
+              </label>
+              <label>
+                <span>Window N</span>
+                <input id="convergenceWindowSize" type="number" min="2" step="50" value="500">
+              </label>
+              <label>
+                <span>Thrust change %</span>
+                <input id="convergenceThrustChange" type="number" min="0" step="0.1" value="3">
+              </label>
+              <label>
+                <span>Torque change %</span>
+                <input id="convergenceTorqueChange" type="number" min="0" step="0.1" value="5">
+              </label>
+              <label>
+                <span>Thrust CV %</span>
+                <input id="convergenceThrustCv" type="number" min="0" step="0.1" value="5">
+              </label>
+              <label>
+                <span>Torque CV %</span>
+                <input id="convergenceTorqueCv" type="number" min="0" step="0.1" value="5">
+              </label>
+            </div>
+          </details>
+
+          <div class="debug-grid overnight-options">
+            <label class="check-label"><input id="overnightMeshSanity" type="checkbox"> Optional quick coarse mesh check</label>
+            <label class="check-label"><input id="overnightContinueFailed" type="checkbox" checked> Continue after failed variant</label>
+            <label class="check-label"><input id="overnightStopFatal" type="checkbox"> Stop batch on first fatal error</label>
+            <label class="check-label"><input id="overnightWarningOverride" type="checkbox"> Allow warning override</label>
+            <input id="overnightValidationOverride" type="hidden" value="true">
+          </div>
+
+          <div class="parse-actions">
+            <button id="overnightImport" class="primary-action">Import</button>
+            <button id="overnightSelectAll">Select All</button>
+            <button id="overnightSelectNone">Select None</button>
+            <button id="overnightSanity" class="primary-action">Run Fast Geometry Check</button>
+            <button id="overnightRun" class="run-sweep">Start Batch Run</button>
+            <button id="overnightStopCurrent" class="danger-action">Stop After Current Propeller</button>
+            <button id="overnightStopAll" class="danger-action">Stop Entire Batch</button>
+            <button id="resumeBatch" class="primary-action">Resume Batch</button>
+          </div>
+
+          <div class="summary-panel">
+            <div>
+              <strong>Pre-run checklist</strong>
+              <p id="overnightChecklist">Import an STL/JSON zip or folder to preview geometry variants.</p>
+            </div>
+            <ul id="overnightWarnings" class="warning-list"></ul>
+          </div>
+          <div id="batchDebugLine" class="debug-line">imported 0 | selected 0 | batch none | import error none | start error none | backend idle</div>
+
+          <div class="summary-panel">
+            <div>
+              <strong>Mesh profiles</strong>
+              <p id="overnightMeshProfiles">Geometry check profile: fast_geometry_check. Batch mesh profile: production_high_resolution.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <div class="table-caption">Imported STL variants</div>
+            <table>
+              <thead>
+                <tr>
+                  <th>selected</th>
+                  <th>variant_id</th>
+                  <th>STL</th>
+                  <th>imported path</th>
+                  <th>case STL</th>
+                  <th>JSON</th>
+                  <th>pitch</th>
+                  <th>root chord</th>
+                  <th>peak chord</th>
+                  <th>tip chord</th>
+                  <th>diam/radius</th>
+                  <th>rpm</th>
+                  <th>Vinf</th>
+                  <th>sanity</th>
+                  <th>bbox</th>
+                  <th>warnings</th>
+                </tr>
+              </thead>
+              <tbody id="overnightVariantsBody">
+                <tr><td colspan="16">No imported geometry batch yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article id="recoveryCard" class="card recovery-card hidden">
+          <div class="card-head">
+            <h2>Recovery</h2>
+          </div>
+          <div id="recoveryList" class="recovery-list">No incomplete batches detected.</div>
+        </article>
+
+        <article class="card status-card">
+          <div class="card-head">
+            <h2>Latest Batch Status</h2>
+            <span id="statePill" class="pill">idle</span>
+          </div>
+          <dl class="status-list">
+            <div><dt>Batch ID</dt><dd id="currentBatchId">none</dd></div>
+            <div><dt>Current action</dt><dd id="currentAction">idle</dd></div>
+            <div><dt>Current case</dt><dd id="selectedCase">none</dd></div>
+            <div><dt>Case index</dt><dd id="caseIndex">0/0</dd></div>
+            <div><dt>Current stage</dt><dd id="currentStage">idle</dd></div>
+            <div><dt>Current PID</dt><dd id="currentPid">n/a</dd></div>
+            <div><dt>Elapsed time</dt><dd id="elapsedTime">0.0 s</dd></div>
+            <div><dt>Heartbeat</dt><dd id="heartbeatStatus">n/a</dd></div>
+            <div><dt>Last log update</dt><dd id="lastLogUpdate">n/a</dd></div>
+            <div><dt>Command</dt><dd id="currentCommand">none</dd></div>
+          </dl>
+          <div class="progress-track" aria-label="Task progress">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+          <p id="modeNote" class="mode-note">Idle. Main path is compressible forward-flight batch testing.</p>
+          <pre id="statusLogTail" class="solver-log-tail">No batch log yet.</pre>
+        </article>
+
+        <article class="card ranking-card">
+          <div class="card-head">
+            <h2>Ranking</h2>
+          </div>
+          <dl class="ranking-list">
+            <div><dt>Best by thrust</dt><dd id="bestThrust">none</dd></div>
+            <div><dt>Best by efficiency</dt><dd id="bestEta">none</dd></div>
+            <div><dt>Best overall candidate</dt><dd id="bestOverall">none</dd></div>
+          </dl>
+        </article>
+
+        <article id="solverProgressCard" class="card solver-progress-card hidden">
+          <div class="card-head">
+            <div>
+              <h2>Solver Progress</h2>
+              <p id="solverProgressNote">Waiting for solver telemetry.</p>
+            </div>
+            <span id="solverStatusPill" class="pill">queued</span>
+          </div>
+          <div class="progress-track" aria-label="Solver physical-time progress">
+            <div id="solverProgressBar" class="progress-bar solver-bar"></div>
+          </div>
+          <dl class="status-list solver-grid">
+            <div><dt>Current time</dt><dd id="solverCurrentTime">n/a</dd></div>
+            <div><dt>Target endTime</dt><dd id="solverTargetTime">n/a</dd></div>
+            <div><dt>Physical progress</dt><dd id="solverPhysicalPercent">n/a</dd></div>
+            <div><dt>Timestep progress</dt><dd id="solverTimestepPercent">n/a</dd></div>
+            <div><dt>deltaT</dt><dd id="solverDeltaT">n/a</dd></div>
+            <div><dt>Courant mean</dt><dd id="solverCoMean">n/a</dd></div>
+            <div><dt>Courant max</dt><dd id="solverCoMax">n/a</dd></div>
+            <div><dt>Execution / clock</dt><dd id="solverExecClock">n/a</dd></div>
+            <div><dt>Log update age</dt><dd id="solverLogAge">n/a</dd></div>
+            <div><dt>Force samples</dt><dd id="solverForceSamples">n/a</dd></div>
+            <div><dt>Latest thrust</dt><dd id="solverThrust">n/a</dd></div>
+            <div><dt>Latest torque</dt><dd id="solverTorque">n/a</dd></div>
+            <div><dt>Raw axial force</dt><dd id="solverRawAxialForce">n/a</dd></div>
+            <div><dt>Signed thrust</dt><dd id="solverSignedThrust">n/a</dd></div>
+            <div><dt>Convergence</dt><dd id="solverConvergenceStatus">n/a</dd></div>
+            <div><dt>Thresholds</dt><dd id="solverConvergenceThresholds">n/a</dd></div>
+            <div><dt>Blocked by</dt><dd id="solverConvergenceBlockedBy">n/a</dd></div>
+            <div><dt>Thrust window</dt><dd id="solverConvergenceThrust">n/a</dd></div>
+            <div><dt>Torque window</dt><dd id="solverConvergenceTorque">n/a</dd></div>
+            <div><dt>Stop reason</dt><dd id="solverStopReason">n/a</dd></div>
+            <div><dt>Validation revs</dt><dd id="solverValidationRevs">n/a</dd></div>
+          </dl>
+          <ul id="solverWarnings" class="warning-list"></ul>
+          <pre id="solverLogTail" class="solver-log-tail">No solver log yet.</pre>
+        </article>
+
+        <article id="solverPlotsCard" class="card solver-plots-card hidden">
+          <div class="card-head">
+            <div>
+              <h2>Live Solver Plots</h2>
+              <p id="plotNote">Plots show the current case in the active batch run.</p>
+            </div>
+          </div>
+          <div class="plot-toolbar">
+            <label>
+              <span>Rolling window</span>
+              <select id="plotWindow">
+                <option value="all">Full history</option>
+                <option value="100">Last 100 samples</option>
+                <option value="500">Last 500 samples</option>
+                <option value="1000">Last 1000 samples</option>
+              </select>
+            </label>
+            <label class="check-label"><input id="showMovingAverage" type="checkbox" checked> Moving average</label>
+            <label>
+              <span>Average window</span>
+              <input id="averageWindow" type="number" min="3" max="2000" step="1" value="500">
+            </label>
+          </div>
+          <div class="plot-tabs">
+            <button class="plot-tab active" data-plot="default">Default</button>
+            <button class="plot-tab" data-plot="forces">Forces</button>
+            <button class="plot-tab" data-plot="moments">Moments</button>
+            <button class="plot-tab" data-plot="courant">Courant</button>
+            <button class="plot-tab" data-plot="residuals">Residuals</button>
+            <button class="plot-tab" data-plot="performance">Performance</button>
+          </div>
+          <div id="plotMessages" class="plot-message">Waiting for solver data.</div>
+          <div id="plotGrid" class="plot-grid"></div>
+          <div id="stabilityHints" class="stability-hints"></div>
+        </article>
+
+        <article class="card results-card">
+          <div class="card-head">
+            <h2>Results</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>variant_id</th>
+                  <th>solver_mode</th>
+                  <th>rpm</th>
+                  <th>Vinf m/s</th>
+                  <th>Vinf mph</th>
+                  <th>thrust N</th>
+                  <th>torque Nm</th>
+                  <th>power W</th>
+                  <th>eta</th>
+                  <th>J</th>
+                  <th>M∞</th>
+                  <th>tip m/s</th>
+                  <th>M helical</th>
+                  <th>CT</th>
+                  <th>CQ</th>
+                  <th>CP</th>
+                  <th>status</th>
+                  <th>warnings</th>
+                  <th>plots</th>
+                  <th>history</th>
+                  <th>log</th>
+                </tr>
+              </thead>
+              <tbody id="resultsBody">
+                <tr><td colspan="21">No batch results yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card log-card">
+          <div class="card-head">
+            <h2>Live Log</h2>
+          </div>
+          <pre id="logPanel">Waiting for task output...</pre>
+        </article>
+
+        <details class="card debug-card">
+          <summary>Debug / Advanced</summary>
+          <p class="debug-warning">These tools are for static checks, incompressible mode, mesh-only runs, solver-only runs, dry runs, force re-mesh, and raw OpenFOAM stage debugging.</p>
+
+          <div class="debug-grid">
+            <label class="check-label"><input id="forceRemesh" type="checkbox"> Force re-mesh</label>
+            <button id="debugMesh">Run Snappy Mesh for Selected Case</button>
+            <button id="debugSolveOnly">Solve Selected Case Using Existing Mesh</button>
+            <button id="debugMeshOnlyBatch">Mesh Only Batch</button>
+            <button id="diagnoseCase">Diagnose Selected Case</button>
+            <button id="debugRebuildSolve">Rebuild Mesh + Solve Selected Case</button>
+            <button id="debugParseCase">Parse Selected Case Raw Output</button>
+            <button id="debugFlipThrust">Flip Thrust Sign</button>
+            <button id="debugFlipTorque">Flip Torque Sign</button>
+            <button id="refreshCases">Refresh Cases</button>
+          </div>
+
+          <ul id="diagnosticsList" class="diagnostics-list">
+            <li>No diagnostics loaded.</li>
+          </ul>
+          <p class="log-paths">Case logs are written under cases/&lt;case&gt;/ as log.blockMesh, log.surfaceFeatureExtract, log.snappyHexMesh, log.topoSet, log.checkMesh, log.foamRun, or log.rhoPimpleFoam.</p>
+        </details>
+      </section>
+    </main>
+    <script src="/web/app.js?v=batch_import_start_fix_20260528"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "source_variant_id": "WFD_Prop_2p0",
+  "validation_case": "validation_WFD_Prop_2p0",
+  "solver_mode": "compressible_forward_mrf",
+  "rpm": 10000.0,
+  "Vinf_mph": 100.0,
+  "Vinf_mps": 44.704,
+  "Tinf_K": 288.15,
+  "pinf_Pa": 101325.0,
+  "gamma": 1.4,
+  "R": 287.0,
+  "air_model": "perfectGas",
+  "turbulence_model": "kOmegaSST",
+  "solver": "rhoPimpleFoam",
+  "omega_rad_s": 1047.1975511965977,
+  "diameter_m": 0.1524,
+  "radius_m": 0.0762,
+  "advance_ratio_J": 1.7600000000000002,
+  "freestream_Mach": 0.13138086178476094,
+  "tip_speed_mps": 79.79645340118076,
+  "helical_tip_Mach": 0.26880826439234445,
+  "freestream_direction": [
+    0,
+    0,
+    1
+  ],
+  "positive_thrust_direction": "configured by thrust_sign and thrust_axis in case_info.json",
+  "rotation_axis": [
+    0,
+    0,
+    1
+  ],
+  "omega_sign": "positive about +z",
+  "force_component_used_as_thrust": "z",
+  "moment_component_used_as_torque": "z",
+  "note": "PASS means internally consistent and runnable; it does not prove final aerodynamic accuracy.",
+  "validation_revolutions": 0.1,
+  "validation_endTime_s": 0.0006,
+  "validation_writeInterval_s": 0.00015
+}

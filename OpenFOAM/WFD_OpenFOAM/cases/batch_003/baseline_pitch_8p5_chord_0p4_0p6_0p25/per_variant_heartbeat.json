@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_003",
+  "updated_at": 1780060828.6607256,
+  "current_stage": "solver",
+  "pid": 20080,
+  "pid_alive": true,
+  "case_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25",
+  "log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.rhoPimpleFoam",
+  "log_file_size": 16375129,
+  "latest_log_timestamp": 1780060827.6040037,
+  "force_file_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/postProcessing/propellerForces/0/forces.dat",
+  "force_file_exists": true,
+  "force_file_size": 1184049,
+  "latest_parsed_progress": {
+    "case": "baseline_pitch_8p5_chord_0p4_0p6_0p25",
+    "validation_id": "",
+    "solver_status": "solver_running",
+    "current_time": 0.00212726,
+    "target_endTime": 0.02,
+    "physical_percent": 10.6363,
+    "timesteps_completed": 5548,
+    "target_timesteps": 200000,
+    "timestep_percent": 2.774,
+    "latest_deltaT": 4.6251981e-07,
+    "courant_mean": 0.0020106125,
+    "courant_max": 0.499924,
+    "configured_maxCo": 0.5,
+    "execution_time_s": 53223.723,
+    "clock_time_s": 53235.0,
+    "solver_log": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.rhoPimpleFoam",
+    "log_tail": [
+      "",
+      "Courant Number mean: 0.0020106125 max: 0.499924",
+      "deltaT = 4.6251981e-07",
+      "Time = 0.00212726s",
+      "",
+      "PIMPLE: Iteration 1",
+      "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+      "smoothSolver:  Solving for Ux, Initial residual = 0.0004358098, Final residual = 4.815531e-09, No Iterations 1",
+      "smoothSolver:  Solving for Uy, Initial residual = 0.00043160975, Final residual = 4.8334174e-09, No Iterations 1",
+      "smoothSolver:  Solving for Uz, Initial residual = 6.8464894e-06, Final residual = 8.3341548e-11, No Iterations 1",
+      "smoothSolver:  Solving for h, Initial residual = 0.00013753545, Final residual = 6.9362196e-10, No Iterations 1",
+      "GAMG:  Solving for p, Initial residual = 0.00016375956, Final residual = 1.4903705e-14, No Iterations 1",
+      "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+      "time step continuity errors : sum local = 5.4624719e-08, global = 3.279551e-10, cumulative = 5.2138515e-06",
+      "GAMG:  Solving for p, Initial residual = 0.00013919727, Final residual = 1.4831248e-14, No Iterations 1",
+      "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+      "time step continuity errors : sum local = 1.7149071e-07, global = 2.7876114e-10, cumulative = 5.2141303e-06",
+      "PIMPLE: Iteration 2"
+    ],
+    "fatal_error": false,
+    "fatal_match": {},
+    "fatal_rule": "",
+    "fatal_line": "",
+    "fatal_excerpt": "",
+    "ignored_log_warnings": [
+      {
+        "line_number": 23,
+        "line": "sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).",
+        "rule": "OPENFOAM_SIGFPE_STARTUP"
+      },
+      {
+        "line_number": 24,
+        "line": "fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)",
+        "rule": "OPENFOAM_FILE_MODIFICATION_STARTUP"
+      },
+      {
+        "line_number": 25,
+        "line": "allowSystemOperations : Allowing user-supplied system call operations",
+        "rule": "OPENFOAM_SYSTEM_OPERATIONS_STARTUP"
+      }
+    ],
+    "log_stale": false,
+    "latest_log_update_time": 1780060811.1453936,
+    "latest_log_update_age_s": 17.45636510848999,
+    "rpm": 10000.0,
+    "validation_revolutions": null,
+    "revolutions_completed": 0.3545433333333333,
+    "validation_revolutions_percent": null,
+    "validation_note": "",
+    "warnings": [
+      "Solver is active"
+    ],
+    "timeseries_samples": 5551,
+    "force_status": "available",
+    "force_file": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/postProcessing/propellerForces/0/forces.dat",
+    "force_sample_count": 5551,
+    "latest_force_time": 0.00212818,
+    "latest_total_force": [
+      0.343960417434,
+      0.42842714814,
+      23.6252146018
+    ],
+    "latest_total_moment": [
+      -0.002349445409,
+      -0.0022278483473,
+      0.645682624331
+    ],
+    "latest_thrust_N": -23.6252146018,
+    "latest_fluid_torque_Nm": 0.645682624331,
+    "latest_shaft_torque_Nm": -0.645682624331,
+    "torque_sign_convention": "shaft_torque_Nm = -fluid_moment_axis_Nm for positive omega when fluid moment opposes rotation"
+  },
+  "current_command": "/usr/bin/python3 /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25 --solve-only"
+}

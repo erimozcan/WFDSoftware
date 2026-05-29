@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py",
+    "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_002/baseline_pitch_8p5_chord_0p4_0p6_0p25",
+    "--solve-only"
+  ],
+  "cwd": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM",
+  "absolute_wrapper_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py",
+  "launch_time": 1780006690.1650107,
+  "termination_reason": "fatal_solver_log_detected",
+  "termination_initiated_by_backend": true,
+  "timeout_seconds": null,
+  "stdout_stderr_log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_002/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.solveWrapper",
+  "pid": 19605,
+  "returncode": -15,
+  "solver_status": "failed",
+  "stdout_stderr_tail": [],
+  "solver_log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_002/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.rhoPimpleFoam",
+  "solver_log_exists": true,
+  "solver_log_size": 1193,
+  "force_file_path": "",
+  "force_file_exists": false,
+  "force_file_size": 0
+}

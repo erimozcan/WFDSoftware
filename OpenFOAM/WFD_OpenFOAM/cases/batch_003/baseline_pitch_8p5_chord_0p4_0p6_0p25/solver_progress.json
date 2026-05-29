@@ -1,0 +1,90 @@
+{
+  "case": "baseline_pitch_8p5_chord_0p4_0p6_0p25",
+  "validation_id": "",
+  "solver_status": "solver_running",
+  "current_time": 0.00212911,
+  "target_endTime": 0.02,
+  "physical_percent": 10.64555,
+  "timesteps_completed": 5552,
+  "target_timesteps": 200000,
+  "timestep_percent": 2.776,
+  "latest_deltaT": 4.6263413e-07,
+  "courant_mean": 0.0020111114,
+  "courant_max": 0.49997426,
+  "configured_maxCo": 0.5,
+  "execution_time_s": 53264.597,
+  "clock_time_s": 53276.0,
+  "solver_log": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.rhoPimpleFoam",
+  "log_tail": [
+    "smoothSolver:  Solving for h, Initial residual = 0.00013756512, Final residual = 6.9193997e-10, No Iterations 1",
+    "GAMG:  Solving for p, Initial residual = 0.00016387231, Final residual = 1.3734181e-14, No Iterations 1",
+    "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+    "time step continuity errors : sum local = 5.4650909e-08, global = 3.2813207e-10, cumulative = 5.2205956e-06",
+    "GAMG:  Solving for p, Initial residual = 0.00013929334, Final residual = 1.3654128e-14, No Iterations 1",
+    "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+    "time step continuity errors : sum local = 1.7159994e-07, global = 2.7891156e-10, cumulative = 5.2208745e-06",
+    "PIMPLE: Iteration 2",
+    "smoothSolver:  Solving for Ux, Initial residual = 0.00021923437, Final residual = 2.4636621e-09, No Iterations 1",
+    "smoothSolver:  Solving for Uy, Initial residual = 0.00021774253, Final residual = 2.4806542e-09, No Iterations 1",
+    "smoothSolver:  Solving for Uz, Initial residual = 3.4390776e-06, Final residual = 4.2523038e-11, No Iterations 1",
+    "smoothSolver:  Solving for h, Initial residual = 3.7471516e-05, Final residual = 2.5849079e-10, No Iterations 1",
+    "GAMG:  Solving for p, Initial residual = 5.7924276e-05, Final residual = 1.3365363e-14, No Iterations 1",
+    "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+    "time step continuity errors : sum local = 5.189808e-07, global = 5.8338231e-10, cumulative = 5.2214579e-06",
+    "GAMG:  Solving for p, Initial residual = 4.9235393e-05, Final residual = 1.3256976e-14, No Iterations 1",
+    "diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0",
+    "time step continuity errors : sum local = 4.4111841e-07, global = 4.9587496e-10, cumulative = 5.2219538e-06"
+  ],
+  "fatal_error": false,
+  "fatal_match": {},
+  "fatal_rule": "",
+  "fatal_line": "",
+  "fatal_excerpt": "",
+  "ignored_log_warnings": [
+    {
+      "line_number": 23,
+      "line": "sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).",
+      "rule": "OPENFOAM_SIGFPE_STARTUP"
+    },
+    {
+      "line_number": 24,
+      "line": "fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)",
+      "rule": "OPENFOAM_FILE_MODIFICATION_STARTUP"
+    },
+    {
+      "line_number": 25,
+      "line": "allowSystemOperations : Allowing user-supplied system call operations",
+      "rule": "OPENFOAM_SYSTEM_OPERATIONS_STARTUP"
+    }
+  ],
+  "log_stale": false,
+  "latest_log_update_time": 1780060856.4664001,
+  "latest_log_update_age_s": 16.3437819480896,
+  "rpm": 10000.0,
+  "validation_revolutions": null,
+  "revolutions_completed": 0.3548516666666667,
+  "validation_revolutions_percent": null,
+  "validation_note": "",
+  "warnings": [
+    "Solver is active"
+  ],
+  "timeseries_samples": 5555,
+  "force_status": "available",
+  "force_file": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/postProcessing/propellerForces/0/forces.dat",
+  "force_sample_count": 5555,
+  "latest_force_time": 0.00213003,
+  "latest_total_force": [
+    0.345053490125,
+    0.43142308175000005,
+    23.6241253685
+  ],
+  "latest_total_moment": [
+    -0.0023626490453,
+    -0.0021956733457,
+    0.645688000161
+  ],
+  "latest_thrust_N": -23.6241253685,
+  "latest_fluid_torque_Nm": 0.645688000161,
+  "latest_shaft_torque_Nm": -0.645688000161,
+  "torque_sign_convention": "shaft_torque_Nm = -fluid_moment_axis_Nm for positive omega when fluid moment opposes rotation"
+}

@@ -1,0 +1,30 @@
+{
+  "case": "baseline_pitch_8p5_chord_0p4_0p6_0p25",
+  "validation_id": "",
+  "solver_log": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/overnight_20260527_222450_7c16e6/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.snappyHexMesh",
+  "force_status": {
+    "status": "force data not available yet",
+    "error": "No postProcessing directory found: /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/overnight_20260527_222450_7c16e6/baseline_pitch_8p5_chord_0p4_0p6_0p25/postProcessing"
+  },
+  "force_samples": [],
+  "courant": [],
+  "residuals": [],
+  "execution": [],
+  "deltaT": [],
+  "stability": {
+    "thrust_N": {
+      "metric": "thrust_N",
+      "status": "not enough samples",
+      "samples": 0
+    },
+    "shaft_torque_Nm": {
+      "metric": "shaft_torque_Nm",
+      "status": "not enough samples",
+      "samples": 0
+    }
+  },
+  "summary": {
+    "samples_used": 0
+  },
+  "note": ""
+}

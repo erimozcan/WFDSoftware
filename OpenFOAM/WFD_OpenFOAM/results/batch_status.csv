@@ -1,0 +1,5 @@
+variant_id,case_path,blockMesh_status,checkMesh_status,overall_status,notes
+baseline_zero,cases/baseline_zero,ok,ok,ok,solve stages completed
+rpm_8000,cases/rpm_8000,ok,ok,ok,solve stages completed
+rpm_10000,cases/rpm_10000,ok,ok,ok,solve stages completed
+rpm_12000,cases/rpm_12000,ok,ok,ok,solve stages completed

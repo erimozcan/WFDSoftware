@@ -1,0 +1,185 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       false;
+
+geometry
+{
+    propeller
+    {
+        type        triSurface;
+        file        "../triSurface/pitch_8p5_slim_chord.stl";
+        name        propeller;
+    }
+
+    propellerRefinementBox
+    {
+        type        box;
+        min         (-0.12 -0.12 -0.06);
+        max         ( 0.12  0.12  0.06);
+    }
+
+    rotatingZoneRefinement
+    {
+        type        cylinder;
+        point1      (0 0 -0.08);
+        point2      (0 0  0.08);
+        radius      0.105;
+    }
+
+    tipRefinementCylinder
+    {
+        type        cylinder;
+        point1      (0 0 -0.035);
+        point2      (0 0  0.035);
+        radius      0.095;
+    }
+
+    wakeRefinement
+    {
+        type        cylinder;
+        point1      (0 0 0.02);
+        point2      (0 0 0.55);
+        radius      0.12;
+    }
+};
+
+castellatedMeshControls
+{
+    maxLocalCells       500000;
+    maxGlobalCells      3000000;
+    minRefinementCells  0;
+    maxLoadUnbalance    0.10;
+    nCellsBetweenLevels 2;
+
+    features
+    (
+        {
+            file        "pitch_8p5_slim_chord.extendedFeatureEdgeMesh";
+            level       4;
+        }
+    );
+
+    refinementSurfaces
+    {
+        propeller
+        {
+            level       (5 6);
+            patchInfo
+            {
+                type    wall;
+            }
+        }
+    }
+
+    resolveFeatureAngle 30;
+
+    refinementRegions
+    {
+        propellerRefinementBox
+        {
+            mode        inside;
+            levels      ((0.0 4));
+        }
+        rotatingZoneRefinement
+        {
+            mode        inside;
+            levels      ((0.0 3));
+        }
+        tipRefinementCylinder
+        {
+            mode        inside;
+            levels      ((0.0 4));
+        }
+        wakeRefinement
+        {
+            mode        inside;
+            levels      ((0.0 2));
+        }
+    }
+
+    // OpenFOAM 13 tutorials use insidePoint for the kept mesh region.
+    insidePoint (0.2 0.2 0.2);
+
+    allowFreeStandingZoneFaces false;
+}
+
+snapControls
+{
+    nSmoothPatch 5;
+    tolerance    1.0;
+    nSolveIter   300;
+    nRelaxIter   8;
+
+    nFeatureSnapIter     10;
+    implicitFeatureSnap  false;
+    explicitFeatureSnap  true;
+    multiRegionFeatureSnap true;
+}
+
+addLayersControls
+{
+    relativeSizes true;
+
+    layers
+    {
+    }
+
+    expansionRatio          1.0;
+    finalLayerThickness     0.3;
+    minThickness            0.1;
+    nGrow                   0;
+    featureAngle            60;
+    slipFeatureAngle        15;
+    nRelaxIter              3;
+    nSmoothSurfaceNormals   1;
+    nSmoothNormals          3;
+    nSmoothThickness        10;
+    maxFaceThicknessRatio   0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedianAxisAngle      90;
+    nBufferCellsNoExtrude   0;
+    nLayerIter              50;
+}
+
+meshQualityControls
+{
+    maxNonOrtho         65;
+    maxBoundarySkewness 4;
+    maxInternalSkewness 4;
+    maxConcave          80;
+    minVol              -1e30;
+    minTetQuality       -1;
+    minTwist            0.01;
+    minDeterminant      0.001;
+    minFaceWeight       0.05;
+    minVolRatio         0.01;
+    nSmoothScale        4;
+    errorReduction      0.75;
+
+    relaxed
+    {
+        maxNonOrtho     75;
+        maxBoundarySkewness 4;
+        maxInternalSkewness 4;
+    }
+}
+
+mergeTolerance 1e-6;
+
+// ************************************************************************* //

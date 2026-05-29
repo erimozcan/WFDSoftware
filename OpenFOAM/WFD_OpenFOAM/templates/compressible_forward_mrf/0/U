@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (__VINF_VECTOR__);
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform (__VINF_VECTOR__);
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform (__VINF_VECTOR__);
+        value           uniform (__VINF_VECTOR__);
+    }
+
+    sideWalls
+    {
+        type            slip;
+    }
+
+    propeller
+    {
+        type            MRFnoSlip;
+        value           uniform (0 0 0);
+    }
+
+    #includeEtc "caseDicts/setConstraintTypes"
+}
+
+// ************************************************************************* //

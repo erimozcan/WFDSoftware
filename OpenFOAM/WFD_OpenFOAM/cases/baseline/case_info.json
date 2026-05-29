@@ -1,0 +1,16 @@
+{
+  "variant_id": "baseline",
+  "stl_file": "WFD_Prop_2p0_clean_m_centered.stl",
+  "rpm": 10000.0,
+  "omega_rad_s": 1047.1975511965977,
+  "freestream_velocity_mps": 0.0,
+  "diameter_m": 0.1524,
+  "radius_m": 0.0762,
+  "reference_area_m2": 0.01824146924750992,
+  "rotation_axis": [
+    0,
+    0,
+    1
+  ],
+  "notes": "Generated from templates/prop_MRF_template. Physics dictionaries are left unchanged for the first automation scaffold milestone."
+}

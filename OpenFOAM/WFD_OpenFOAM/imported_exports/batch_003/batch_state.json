@@ -1,0 +1,58 @@
+{
+  "status": "abandoned",
+  "stage": "SOLVER_RUNNING",
+  "selected_count": 1,
+  "total_variants": 1,
+  "settings": {
+    "batch_id": "batch_003",
+    "selected_variant_ids": [
+      "baseline_pitch_8p5_chord_0p4_0p6_0p25"
+    ],
+    "rpm": 10000.0,
+    "freestream_speed": 300.0,
+    "speed_units": "mph",
+    "Tinf_K": 288.15,
+    "pinf_Pa": 101325.0,
+    "max_wall_clock_minutes_per_propeller": 0.0,
+    "averaging_window": 100,
+    "averaging_mode": "last_n",
+    "averaging_percent": 25.0,
+    "min_average_time": 0.0,
+    "geometry_check_profile": "fast_geometry_check",
+    "run_mesh_sanity": false,
+    "batch_mesh_profile": "production_high_resolution",
+    "continue_after_failed_variant": true,
+    "stop_on_first_fatal_error": false,
+    "allow_warning_override": false,
+    "validation_override": true
+  },
+  "backend_runner_active": false,
+  "last_update_time": 1780086973.0998683,
+  "started_at": 1780007159.2743282,
+  "current_index": 1,
+  "current_variant_id": "baseline_pitch_8p5_chord_0p4_0p6_0p25",
+  "case_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25",
+  "current_command": "/usr/bin/python3 /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25 --solve-only",
+  "current_pid": 20080,
+  "solver": {
+    "command": [
+      "/usr/bin/python3",
+      "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py",
+      "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25",
+      "--solve-only"
+    ],
+    "cwd": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM",
+    "absolute_wrapper_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/scripts/run_case.py",
+    "pid": 20080,
+    "returncode": null,
+    "timeout_seconds": null,
+    "stdout_stderr_log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.solveWrapper",
+    "solver_log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/log.rhoPimpleFoam",
+    "solver_log_exists": true,
+    "solver_log_size": 16375877,
+    "force_file_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_003/baseline_pitch_8p5_chord_0p4_0p6_0p25/postProcessing/propellerForces/0/forces.dat",
+    "force_file_exists": true,
+    "force_file_size": 1184049
+  },
+  "abandoned_at": 1780086973.0996227
+}

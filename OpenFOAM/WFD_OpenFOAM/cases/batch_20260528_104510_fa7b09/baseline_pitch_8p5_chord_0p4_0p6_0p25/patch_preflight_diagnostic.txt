@@ -1,0 +1,6 @@
+MESH_PATCH_ERROR
+Boundary patch preflight failed: final mesh boundary does not contain propeller and no propeller_patch* boundary patches could be combined.
+expected_patch: propeller
+actual_boundary_patches: inlet, outlet, sideWalls
+snappy_propeller_patch_count: 20084
+solver_was_not_launched: true

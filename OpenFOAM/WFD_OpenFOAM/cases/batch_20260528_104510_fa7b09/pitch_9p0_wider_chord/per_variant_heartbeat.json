@@ -1,0 +1,12 @@
+{
+  "batch_id": "20260528_104510_fa7b09",
+  "updated_at": 1779985744.0438542,
+  "current_stage": "solver",
+  "pid": 10710,
+  "pid_alive": true,
+  "case_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_20260528_104510_fa7b09/pitch_9p0_wider_chord",
+  "log_path": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_20260528_104510_fa7b09/pitch_9p0_wider_chord/log.snappyHexMesh",
+  "log_file_size": 2231979,
+  "latest_log_timestamp": 1779985725.994486,
+  "current_command": "/usr/bin/python3 scripts/run_case.py /home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_20260528_104510_fa7b09/pitch_9p0_wider_chord --solve-only"
+}

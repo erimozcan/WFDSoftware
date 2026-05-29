@@ -1,0 +1,19 @@
+{
+  "mesh_profile": "fast_geometry_check",
+  "snappyHexMeshDict_source": "/home/erimozcan/OpenFOAM/erim-13/run/WFD_OpenFOAM/cases/batch_20260528_094604_19770e/baseline_pitch_8p5_chord_0p4_0p6_0p25/system/snappyHexMeshDict",
+  "refinement_settings": {
+    "mesh_profile": "fast_geometry_check",
+    "runs_snappyHexMesh": false,
+    "purpose": "Import, path, scale, and case-local STL reference checks.",
+    "checks": [
+      "STL exists",
+      "STL non-empty",
+      "bounding box",
+      "scale",
+      "axis offset",
+      "case STL reference"
+    ]
+  },
+  "sanity_check_mesh": true,
+  "production_mesh": false
+}
