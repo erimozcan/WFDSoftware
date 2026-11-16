@@ -1,0 +1,11 @@
+variant_id,GeometricPitch,ChordRoot,ChordPeak,ChordTip
+pitch_17p0_slim_chord,17.0 in,0.36 in,0.54 in,0.22 in
+pitch_17p0_ultraslim_chord,17.0 in,0.32 in,0.48 in,0.20 in
+pitch_17p0_superslim_chord,17.0 in,0.28 in,0.42 in,0.18 in
+pitch_18p0_slim_chord,18.0 in,0.36 in,0.54 in,0.22 in
+pitch_18p0_ultraslim_chord,18.0 in,0.32 in,0.48 in,0.20 in
+pitch_18p0_superslim_chord,18.0 in,0.28 in,0.42 in,0.18 in
+pitch_18p5_ultraslim_chord,18.5 in,0.32 in,0.48 in,0.20 in
+pitch_19p0_slim_chord,19.0 in,0.36 in,0.54 in,0.22 in
+pitch_19p0_ultraslim_chord,19.0 in,0.32 in,0.48 in,0.20 in
+pitch_19p0_superslim_chord,19.0 in,0.28 in,0.42 in,0.18 in

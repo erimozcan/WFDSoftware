@@ -1,0 +1,11 @@
+variant_id,GeometricPitch,ChordRoot,ChordPeak,ChordTip
+pitch_13p0_baseline_chord,13.0 in,0.40 in,0.60 in,0.25 in
+pitch_14p0_baseline_chord,14.0 in,0.40 in,0.60 in,0.25 in
+pitch_15p0_baseline_chord,15.0 in,0.40 in,0.60 in,0.25 in
+pitch_16p0_baseline_chord,16.0 in,0.40 in,0.60 in,0.25 in
+pitch_17p0_baseline_chord,17.0 in,0.40 in,0.60 in,0.25 in
+pitch_18p0_baseline_chord,18.0 in,0.40 in,0.60 in,0.25 in
+pitch_16p0_slim_chord,16.0 in,0.36 in,0.54 in,0.22 in
+pitch_16p0_wider_chord,16.0 in,0.44 in,0.66 in,0.27 in
+pitch_17p0_slim_chord,17.0 in,0.36 in,0.54 in,0.22 in
+pitch_17p0_wider_chord,17.0 in,0.44 in,0.66 in,0.27 in
